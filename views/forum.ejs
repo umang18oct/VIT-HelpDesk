@@ -1,0 +1,146 @@
+<html>
+<head>
+<title> FORUMS </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tab{
+	width: 100px;
+	height: 50px;
+}
+.container{
+  margin: 5px 2px 50px 100px;
+  width: 1000px;
+  height:auto;
+  float: right;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 20px;
+  left:200px;
+  top:5px;
+  }
+    #image{
+    width:70px;
+    height:70px;
+  }
+
+  
+  #name{
+    font-weight: bold;
+    float: right;
+    vertical-align: middle;
+  }
+ #fb{
+  width:  30px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+ }
+
+  h1:hover{
+        color: red;
+
+ }
+ .tab {
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     margin-left: 0.2%;
+     background-color: #f1f1f1;
+     width: 15%;
+     height:50%;
+     margin-top: 50px;
+ }
+ ul:first-child{
+   font-size: 50px;
+   margin-left: -40px;
+ }
+ ul{
+   list-style-type: none;
+ }
+ #sidenav{
+   width:100%;
+   height:42px;
+   float:left;
+   margin-left:5px;
+   font-size: 20px;
+ }
+ #cat{
+   font-size: 42px;
+ }
+
+</style>
+<script type="text/javascript">
+var i=0;
+var j=0;
+function upvote(id){
+  document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+1;
+}
+function downvote(id){
+    document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+1;
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="tab">
+  <ul>
+    <li id="cat">Categories</li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(1)">Books</button></li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(2)">Technology</button></li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(3)">Entertainment</button></li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(4)">Academics</button></li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(5)">Sports</button></li>
+    <li><button class="btn btn-success" id="sidenav" onclick="specific(6)">Miscellaneous</button></li>
+  </ul>
+  </div>
+  <div class="container">
+<h1 id="heading"> <center> <b> Books and Literature </b> </center> </h1>
+ <hr>
+<img src="images\img.jpg" id="image" />  Alice Wonderland <br>
+<p> <b> Which books among these should I use for Web Tech? </b> </p>
+<br>
+
+<img src="images\book1.jpg" id="books" />
+<img src="images\book2.jpg" id="books" />
+<img src="images\book3.jpg" id="books" /> <br>
+<hr>
+<hr>
+<img src="images\img.jpg" id="image" /> <b> Juile </b>
+<p> I think you should go with Pro Java Programming book. It has all the topics covered in detail and also there are a lot of examples which can help
+you to practice Java Programming. For HTML and CSS i reccomend you to use Basic HTML and CSS books. </p>
+
+<button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('1u')"> Upvote <span id="1u">0</span></button>
+<button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('1d')"> Downvote <span id="1d">0</span></button>
+<img src="images\fb.png"id="fb" />
+<img src="images\gmail.png"id="fb" />
+<hr>
+
+<img src="images\img.jpg" id="image" /> <b> John </b>
+<p> I reccomend you to use all 3 books as they all cover different topics for Web Development. </p>
+<button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('2u')"> Upvote <span id="2u">0</span></button>
+<button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('2d')"> Downvote <span id="2d">0</span></button>
+
+<img src="images\fb.png"id="fb" />
+<img src="images\gmail.png"id="fb" />
+<hr>
+<img src="images\img.jpg" id="image" /> <b> Emma </b>
+<p> If you want you can study from Online websites but using books is a good
+choice </p>
+<button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('3u')"> Upvote <span id="3u">0</span></button>
+<button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('3d')"> Downvote <span id="3d">0</span></button>
+<img src="images\fb.png"id="fb" />
+<img src="images\gmail.png"id="fb" />
+<hr>
+</body>
+</html>

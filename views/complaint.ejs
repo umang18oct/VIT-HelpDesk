@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<title>Minimaxing by HTML5 UP</title>
+		<link rel="stylesheet" href="assets1/css/main.css" />
+		 <link href="assets/css/bootstrap.css" rel="stylesheet" />
+		  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+		  <link href="assets/css/complaints1.css" rel="stylesheet" />
+		  <script type="text/javascript">
+		  	function showcomplaints(num){
+		  		if(num==1){
+		  			document.getElementById("1").style.display="inline-block"; document.getElementById("2").style.display="none";
+		  			document.getElementById("3").style.display="none";
+		  			document.getElementById("4").style.display="none";
+		  		}
+		  		else if(num==2){
+		  			document.getElementById("2").style.display="inline-block"; document.getElementById("1").style.display="none";
+		  			document.getElementById("3").style.display="none";
+		  			document.getElementById("4").style.display="none";
+		  		}
+		  		else if(num==3){
+		  			document.getElementById("3").style.display="inline-block"; document.getElementById("1").style.display="none";
+		  			document.getElementById("2").style.display="none";
+		  			document.getElementById("4").style.display="none";
+		  		}
+		  		else if(num==4){
+		  			document.getElementById("4").style.display="inline-block"; document.getElementById("1").style.display="none";
+		  			document.getElementById("2").style.display="none";
+		  			document.getElementById("3").style.display="none";
+		  		}
+		  	}
+		  </script>
+	</head>
+	<body>
+	  <div class="navbar navbar-inverse animated slideInDown">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand  animated pulse infinite" id="lab" href="/">VIT HelpDesk</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right  ">
+            <li>
+              <a href="/">HOME</a>
+            </li>
+            <li>
+              <a href="/developers">DEVELOPERS</a>
+            </li>
+            <li>
+              <a href="/logout" data-toggle="tooltip" data-placement="bottom" data-animation="animated zoomIn" title="Are you sure, you want to log out?">LOGOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	  <a  data-toggle="modal" data-target="#exampleModal1" > <button class="top-button" ><span> POST YOUR COMPLAINT </span></button> </a>
+
+      <div class="modal bounce animated" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" style="color:white">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+						<form action="/complaint" method="post">
+            <div class="modal-header" style="background-color:rgba(110,189,153,0.8); border-color:black;">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span none="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="exampleModal1Label">POST YOUR COMPLAINT</h4>
+            </div>
+            <div class="modal-body" style="background-color:black; border-color:black;">
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Type:</label>
+                  <select class="form-control" id="recipient-name" maxlength="240" name="complaintType">
+                  <option selected="selected"> electricity</option>
+                  <option> furniture</option>
+                  <option> mess</option>
+                   <option>indiscipline</option>
+									<option> abuse </option>
+                   <option> personal</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Description:</label>
+                  <textarea class="form-control" id="message-text" required="required" name="description"> </textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="background-color:black; border-color:black;">
+              <a>
+                <button  id="bt1" data-toggle="tooltip" data-placement="bottom" data-animation="animated zoomIn" type="submit" class="btn btn-default" style="float:left" onclick="display()"> Send message</button>
+              </a>
+            </div>
+						              </form>
+          </div>
+        </div>
+      </div>
+			<div id="main">
+				<div class="container">
+					<div class="row main-row">
+
+						<div class="4u 12u(mobile)">
+						</div>
+						<div class="4u 12u(mobile)">
+						</div>
+					</div>
+					<div class="row main-row">
+						<div class="6u 12u(mobile)">
+							<section>
+								<h2>Posted Complaints</h2>
+								<p>All your posted complaints will be displayed in this section</p>
+								<ul class="big-image-list">
+									<li >
+										<img src="images/electric-guy.jpg" alt="" class="left" />
+										<a href="#detail" onclick="showcomplaints(1)"><h3>Electricity</h3> </a>
+										<p>Sir, my room's tubelight is not working. It is continuosly blinking and causing a lot of trouble.</p>
+									</li>
+									<li>
+										<img src="images/cleaning.png" alt="" class="left" />
+										<a href="#detail" onclick="showcomplaints(2)"><h3>Personal</h3></a>
+										<p>For anyone facing personal problems with any student or any other official person of the college.</p>
+									</li>
+									<li >
+										<img src="images/sofa.png" alt="" class="left" />
+										<a href="#detail" onclick="showcomplaints(3)"><h3>Furniture</h3></a>
+										<p>My table is broken. </p>
+									</li>
+									<li >
+										<img src="images/abuse.jpg" alt="" class="left" />
+										<a href="#detail" onclick="showcomplaints(4)"><h3>Abuse</h3></a>
+										<p>For anyone who has faced aby kind of abuse within the campus of the college. </p>
+									</li>
+
+								</ul>
+							</section>
+
+						</div>
+						<div class="6u 12u(mobile)">
+
+							<article class="blog-post" id="1">
+								<h2 id="detail">Electricity</h2>
+								<img src="images\electric-guy.jpg" style="width:350px; height:250px;"> </a>
+								<p>Sir my room's electric connection is not working at all. Please send the electrician as soon as possible as the room's light is not working properly.</p>
+							</article>
+								<article class="blog-post" id="2">
+								<h2 id="detail">Personal</h2>
+								<img src="images\cleaning.png" style="width:350px; height:250px;"> </a>
+								<p>Sir my room is not cleaned and it's been a long time since it was cleaned last.</p>
+							</article>
+								<article class="blog-post" id="3">
+								<h2 id="detail">Furniture</h2>
+								<img src="images\sofa.png" style="width:350px; height:250px;"> </a>
+								<p>Sir the furniture of the room is not in a good condition and also the lock of our almirah is jammed.</p>
+							</article>
+							<article class="blog-post" id="4">
+								<h2 id="detail">Abuse</h2>
+								<img src="images\abuse.jpg" style="width:350px; height:250px;"> </a>
+								<p>Sir I have been abused a lot by my friends.</p>
+							</article>
+							<% complaints.forEach(function(complaint,index){ %>
+								<article class="blog-post" id="<%= index+5 %>">
+									<h2 id="detail"><%= complaint.complaintType %></h2>
+									<img src="images\abuse.jpg" style="width:350px; height:250px;"> </a>
+									<p><%= complaint.description %></p>
+								</article>
+							<% }) %>
+						</div>
+					</div>
+				</div>
+			</div>
+ <div class="footer">
+    <div class="container">
+      <p>&copy; VIT HelpDesk-2016</p>
+      <a style="float:right" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="umang18oct@gmail.com">CONTACT US</a>
+      <div class="modal bounce animated" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:white">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:rgba(110,189,153,0.8); border-color:black;">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+            </div>
+            <div class="modal-body" style="background-color:black; border-color:black;">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" style="background-color:black; border-color:black;">
+              <a>
+                <button  id="bt1" data-toggle="tooltip" data-placement="bottom" data-animation="animated zoomIn" title="Functionality will be enabled soon" type="button" class="btn btn-default" style="float:left">Send message</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<h3> Social Links: </h3>
+      <a href="https://www.facebook.com/UmG.18" class="btn btn-social btn-facebook">
+        <i class="fa fa-facebook"></i>
+        &nbsp; Facebook</a>
+      <a href="https://plus.google.com/u/0/+umangchaudhary18" class="btn btn-social btn-google">
+        <i class="fa fa-google-plus"></i>
+        &nbsp; Google</a>
+    </div>
+
+		<!-- Scripts -->
+			<script src="assets1/js/jquery.min.js"></script>
+			<script src="assets1/js/skel.min.js"></script>
+			<script src="assets1/js/skel-viewport.min.js"></script>
+			<script src="assets1/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets1/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets1/js/main.js"></script>
+			  <script src="assets/js/jquery-1.11.1.js"></script>
+			   <script src="assets/js/bootstrap.js"></script>
+  </body>
+	</body>
+</html>

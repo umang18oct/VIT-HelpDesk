@@ -1,0 +1,72 @@
+.container .row {
+  margin:20px;
+  text-align:center;
+  vertical-align: middle;
+}
+.container .row img {
+  margin:20px 20px;
+  border-radius:50px;
+}
+	  	.footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 30px 0;
+    box-shadow:0 0 32px rgba(255,255,255,0.5);
+}
+.btn-social {
+    color: white;
+    opacity: 0.8;
+}
+.btn-social:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+.btn-facebook {
+    background-color: #3b5998;
+}
+.btn-linkedin {
+    background-color: #0e76a8;
+}
+.btn-google {
+    background-color: #c32f10;
+}	
+.top-button {
+  border-radius: 4px;
+  background-color: lightgreen;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 550px;
+}
+
+.top-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.top-button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.top-button:hover span {
+  padding-right: 25px;
+}
+
+.top-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

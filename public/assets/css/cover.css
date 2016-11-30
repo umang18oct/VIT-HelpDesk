@@ -1,0 +1,133 @@
+.navbar{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  }
+  #vid{
+  width:100%;
+  height:120vh;
+  margin: -9% 0;
+  padding: 0;
+  z-index: -1;
+  position: relative;
+}
+.top{
+position: relative;
+height: 100.5vh;
+background-color: rgba(110,189,153,0.8);
+}
+.overlay {
+    position:absolute;
+    margin: -30% 0;
+    z-index:1;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    padding: 0 10%;
+}
+.learn{
+  color:#fff;
+  background:url(https://cdn.involvio.com/assets/marketing/down-arrow-a9ceedb55e9e7e539dd7bac8a6137931.svg) center bottom no-repeat;
+  padding-bottom:26px;
+  text-transform:uppercase;
+  font-size:13px;
+  position:relative;
+  bottom: -10em;
+  -webkit-transition:bottom 100ms ease-in-out;
+  -moz-transition:bottom 100ms ease-in-out;
+  transition:bottom 100ms ease-in-out;
+  border: none;
+}
+.learn:hover{
+  bottom:-11em;
+}
+.footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 30px 0;
+    box-shadow:0 0 32px rgba(255,255,255,0.5);
+}
+/* SOCIAL BUTTONS */
+.btn-social {
+    color: white;
+    opacity: 0.8;
+}
+.btn-social:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+.btn-facebook {
+    background-color: #3b5998;
+}
+.btn-linkedin {
+    background-color: #0e76a8;
+}
+.btn-google {
+    background-color: #c32f10;
+}
+ul li ul li{
+  font-size: 20px;
+  padding: 10px;
+}
+.details{
+  background-color: #f1f3f3;
+  color: black;
+  padding-bottom: 20px;
+}
+.steps{
+  list-style-type: none;
+}
+.icon{
+  height:300px;
+  width:250px;
+  border-radius: 100%;
+}
+#i2{
+  width:300px;
+}
+body{
+    background-color: #f1f3f3;
+}
+.details h2{
+  color: #565a5f;
+}
+.details p{
+  color: #7e8a94
+}
+#d2{
+  color: #565a5f;
+}
+li p{
+  text-align: left;
+}
+#d1{
+  text-align: center;
+}
+.btn-primary {
+  width: 150px;
+  padding: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+    border: 2px solid #6bbe98;
+    color: #6bbe98;
+    background-color: #f1f3f3;
+}
+.btn-primary:hover {
+    cursor: pointer;
+    background: #6bbe98;
+    color: #fff;
+    border: 2px solid #6bbe98;
+}
+.btn-default{
+  background-color: #6bbe98;
+  border: 2px solid black;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.btn-default:hover{
+  background-color: black;
+  border: 2px solid #6bb398;
+  color: white;
+}

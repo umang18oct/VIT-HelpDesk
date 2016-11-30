@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    /* Style the list */
+    .tab {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-left: 0.2%;
+        background-color: #f1f1f1;
+        width: 15%;
+        height:47%;
+        margin-top: 50px;
+    }
+ul{
+  list-style-type: none;
+}
+    .container{
+    	margin: 50px 2px 50px 250px;
+    	width: 1200px;
+    	height:auto;
+    	float: right;
+    	padding: 5px;
+    	position: absolute;
+    	border-radius: 5px;
+    	bottom: 20px;
+    	left:200px;
+    	top:5px;
+    	}
+      #image{
+        width:25px;
+        height:25px;
+      }
+      #name{
+        font-weight: bold;
+
+      }
+      #Reply{
+        width: 90px;
+        height: 40px;
+        float:right;
+      }
+      #Downvote{
+        width: 105px;
+        height: 40px;
+      }
+      #Upvote{
+        width: 95px;
+        height: 40px;
+      }
+      #name{
+        float: right;
+        vertical-align: middle;
+      }
+     #fb{
+      width:  30px;
+      height: 30px;
+      float: right;
+      margin-left: 10px;
+     }
+     ul:first-child{
+       font-size: 50px;
+       margin-left: -40px;
+     }
+     #mainbtn{
+       width:200px;
+       margin-left:0;
+       height: 80px;
+       width: 595px;
+       float:left;
+       font-size: 60px;
+       padding: 0.5px;
+     }
+     hr{
+       background-color:black;
+       height:0.125%;
+     }
+     p{
+       font-family: sans-serif;
+       font-size: 20px;
+       // display: grid inline inline-block inline-flex inline-grid inline-table list-item;
+     }
+     b{
+       font-size: 25px;
+     }
+     #sidenav{
+       width:120%;
+       height:62px;
+       float:left;
+       margin-left: -40px;
+       font-size: 40px;
+     }
+
+
+    </style>
+    <script type="text/javascript">
+      var page;
+
+      function specific(page){
+        if(page==1){
+          if(document.getElementById("Books").style.display=="none"){
+            document.getElementById("Books").style.display="inline"; document.getElementById("Technology").style.display="none";  document.getElementById("Entertainment").style.display="none";
+          }
+          else{
+            document.getElementById("Technology").style.display="none";
+            document.getElementById("Entertainment").style.display="none";
+          }
+        }
+        if(page==2){
+          if(document.getElementById("Technology").style.display=="none"){
+            document.getElementById("Technology").style.display="inline"; document.getElementById("Books").style.display="none";  document.getElementById("Entertainment").style.display="none";
+          }
+          else{
+            document.getElementById("Books").style.display="none";
+            document.getElementById("Entertainment").style.display="none";
+          }
+        }
+        if(page==3){
+          if(document.getElementById("Entertainment").style.display=="none"){
+            document.getElementById("Entertainment").style.display="inline"; document.getElementById("Technology").style.display="none";  document.getElementById("Books").style.display="none";
+          }
+          else{
+            document.getElementById("Technology").style.display="none";
+            document.getElementById("Books").style.display="none";
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+         var up=new Array();
+         var down=new Array();
+         var i=0;
+         var j=0;
+         function upvote(id){
+           document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+1;
+         }
+         function downvote(id){
+             document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+1;
+         }
+         </script>
+  </head>
+  <body>
+    <div class="tab">
+    <ul>
+      <li id="cat">Categories</li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(1)">Books</button></li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(2)">Technology</button></li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(3)">Entertainment</button></li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(4)">Academics</button></li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(5)">Sports</button></li>
+      <li><button class="btn btn-success" id="sidenav" onclick="specific(6)">Miscellaneous</button></li>
+    </ul>
+  </div>
+
+    <div class="container">
+
+      <p>  <button type="button" class="btn btn-success" id="mainbtn">Most Liked</button>
+      <button type="button" class="btn btn-success" id="mainbtn">Most Recent</button> </p>
+      <br>
+
+        <span id="Books">
+        <p><h1 id="heading"> Books and Literature </h1></p>
+        <hr>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Alice Wonderland </b><br>
+        <a href="forum.html" ><p>  Which books among these should I use for Web Tech: <b>1.</b> All in 1 HTML,CSS,JS  <b>2.</b> Detailed study of Jquerry and Angular JS  <b>3.</b> A handbook of html,css,JS ? </p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('1u')"> Upvote <span id="1u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('1d')"> Downvote <span id="1d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Juile </b>
+        <a href="forum.html" ><p>Which book should I take for my AOD CAT 2 exam ?</p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('2u')"> Upvote <span id="2u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('2d')"> Downvote <span id="2d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> John </b>
+        <a href="forum.html" ><p> Can anyone suggest from which book should I study Chemistry for engineers ? </p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('3u')"> Upvote <span id="3u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('3d')"> Downvote <span id="3d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Emma </b>
+        <a href="forum.html" ><p> Does anyone know which is the text book for software engineering subject ? </p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('4u')"> Upvote <span id="4u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('4d')"> Downvote <span id="4d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Abhishek </b>
+        <p> Can anyone here suggest a good novel for passionate reading ? </p>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('5u')"> Upvote <span id="5u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('5d')"> Downvote <span id="5d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Rishabh </b>
+        <a href="forum.html" ><p> Can anyone help me out with AOD power series solution of the differential equations ? </p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('6u')"> Upvote <span id="6u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('6d')"> Downvote <span id="6d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+        <img src="images\img.jpg" id="image" /> <b> Rohan </b>
+        <a href="forum.html" ><p> Can anyuone here help me out with javascript DOM model ? </p></a>
+        <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('7u')"> Upvote <span id="7u">0</span></button>
+        <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('7d')"> Downvote <span id="7d">0</span></button>
+        <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+        <hr>
+      </span>
+
+
+
+
+    <span id="Technology">
+      <h1 id="heading"> Technology </h1>
+      <hr>
+      <hr>
+      <img src="images\img.jpg" id="image" /> <b> Alice Wonderland </b><br>
+      <a href="forum.html" ><p>  Which is the latest android version that got launched ? </p></a>
+      <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('8u')"> Upvote <span id="8u">0</span></button>
+      <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('8d')"> Downvote <span id="8d">0</span></button>
+      <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+      <hr>
+      <img src="images\img.jpg" id="image" /> <b> Juile </b>
+      <a href="forum.html" ><p> My laptop is having problem installing the linux, can anyone help ?</p></a>
+      <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('9u')"> Upvote <span id="9u">0</span></button>
+      <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('9d')"> Downvote <span id="9d">0</span></button>
+      <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+      <hr>
+      <img src="images\img.jpg" id="image" /> <b> John </b>
+      <a href="forum.html" ><p> Does anyone has the licensed version of MATLAB ? </p></a>
+      <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('10u')"> Upvote <span id="10u">0</span></button>
+      <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('10d')"> Downvote <span id="10d">0</span></button>
+      <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+      <hr>
+      <img src="images\img.jpg" id="image" /> <b> Emma </b>
+      <a href="forum.html" ><p> Which latest MACBOOK came out into market ? </p></a>
+      <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('11u')"> Upvote <span id="11u">0</span></button>
+      <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('11d')"> Downvote <span id="11d">0</span></button>
+      <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+      <hr>
+      <img src="images\img.jpg" id="image" /> <b> Abhishek </b>
+      <a href="forum.html" ><p> WHich Web technologies are the basic building blocks for developing web pages ? </p></a>
+      <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('12u')"> Upvote <span id="12u">0</span></button>
+      <button type="button" class="btn btn-success"value="Downvote" id="Downvote" onclick="downvote('12d')"> Downvote <span id="12d">0</span></button>
+      <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+      <hr>
+    </span>
+
+
+
+
+  <span id="Entertainment">
+    <h1 id="heading"> Entertainment </h1>
+    <hr>
+    <hr>
+    <img src="images\img.jpg" id="image" /> <b> Alice Wonderland </b><br>
+    <a href="forum.html" ><p>  Does anyone have the TV series named Friends ? </p></a>
+    <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('13u')"> Upvote <span id="13u">0</span></button>
+    <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('13d')"> Downvote <span id="13d">0</span></button>
+    <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+    <hr>
+    <img src="images\img.jpg" id="image" /> <b> Juile </b>
+    <a href="forum.html" ><p> Does anyone has the TV series named The Vampire Diaries ?</p></a>
+    <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('14u')"> Upvote <span id="14u">0</span></button>
+    <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('14d')"> Downvote <span id="14d">0</span></button>
+    <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+    <hr>
+    <img src="images\img.jpg" id="image" /> <b> John </b>
+    <a href="forum.html" ><p> Can anyone give me GTA san andreas latest game ? </p></a>
+    <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('15u')"> Upvote <span id="15u">0</span></button>
+    <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('15d')"> Downvote <span id="15d">0</span></button>
+    <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+    <hr>
+    <img src="images\img.jpg" id="image" /> <b> Emma </b>
+    <a href="forum.html" ><p> Who has the Batman's latest version of the game that just came out into market ? </p></a>
+    <button type="button" class="btn btn-success"value="Upvote" id="Upvote" onclick="upvote('16u')"> Upvote <span id="16u">0</span></button>
+    <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('16d')"> Downvote <span id="16d">0</span></button>
+    <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+    <hr>
+    <img src="images\img.jpg" id="image" /> <b> Abhishek </b>
+    <a href="forum.html" ><p> Does anyone want to play counter strike tonight ? </p></a>
+    <button type="button" class="btn btn-success" value="Upvote" id="Upvote" onclick="upvote('17u')"> Upvote <span id="17u">0</span></button>
+    <button type="button" class="btn btn-success" value="Downvote" id="Downvote" onclick="downvote('17d')"> Downvote <span id="17d">0</span></button>
+    <a href="forum.html" ><button type="button" class="btn btn-success" value="Reply" id="Reply">Replies</button></a>
+    <hr>
+  </span>
+
+
+    </div>
+  </body>
+</html>
